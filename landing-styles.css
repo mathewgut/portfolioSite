@@ -1,0 +1,59 @@
+:root {
+    background: rgb(87, 87, 87);
+    background: linear-gradient(180deg, rgb(63, 63, 63) 0%, rgb(18, 18, 18) 100%);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+    font-family: "Jetbrains Mono", Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 2em;
+    max-width: fit-content;
+    height: 75vh;   
+}
+
+h1 {
+    margin-bottom: 0.4em;
+    font-size: 4em;
+    color: white;
+    /*text-decoration: underline;*/
+}
+
+.button-container {
+    display: flex;
+    gap: 1em;
+    
+}
+
+.button-container > button {
+    flex: 1;
+    padding: 0.5em 0.8em;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 1.25em;
+    border: white solid 0.15em;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+    margin-top: 1em;
+}
+
+.social-media-links > img {
+    width: 1.6em;
+}
