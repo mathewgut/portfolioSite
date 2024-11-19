@@ -58,8 +58,21 @@ h1 {
 
 .social-media-links > a > img {
     width: 1.6em;
-    transition: transform .2s;
+    transition: transform 0.2s;
 }
+
+#h-tagline {
+    transition: transform 0.35s;
+}
+
+#i-tagline {
+    transition: transform 0.35s;
+}
+
+#period-tagline {
+    transition: transform 0.35s;
+}
+
 
 /* scale on hover */
 
@@ -72,6 +85,27 @@ h1 {
     background-color: white;
     color: black;
 }
+
+/* transform on hover for tagline*/
+
+#h-tagline:hover {
+    /*color: yellow;*/
+    display: inline-block; 
+    transform: translatex(-0.2em);
+}
+
+#i-tagline:hover {
+    /*color: yellow;*/
+    display: inline-block;
+    transform: skew(15deg);
+}
+
+#period-tagline:hover {
+    display: inline-block;
+    transform: translatey(-0.6em);
+}
+
+
 
 /* ABOUT */
 
