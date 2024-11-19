@@ -105,18 +105,45 @@ h1 {
     transform: translatey(-0.6em);
 }
 
-
-
 /* ABOUT */
 
 .about-container {
     display: flex;
     color: white;
-    border: white solid 0.15em;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+.about-text {
+    display: flex;
+    flex-direction: column;
+    border: white solid 0.1em;
     border-radius: 1.5em;
+    padding: 1em 1.5em;
+
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+    box-shadow: 0px 0px 5px 1px rgba(255,255,255,1);
+}
+
+#IMD-text {
+    font-weight: 700;
+    transition: 0.3;
+}
+#IMD-text:hover {
+    text-decoration: underline;
+}
+
+.about-text h2{
+    font-weight: 900;
     font-size: 2em;
-    padding: 0.5em 1em;
 }
+
 .about-text > p {
-    font-size: 1em;
-}
+    font-family: "geist mono",'Courier New', Courier, monospace;
+    font-size: 1.25em;
+    max-width: 40vw;
+    margin-top: 0;
+   }
