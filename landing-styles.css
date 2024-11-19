@@ -69,7 +69,8 @@ h1 {
 
 .button-container > button:hover {
     transform: scale(1.2);
-
+    background-color: white;
+    color: black;
 }
 
 /* ABOUT */
