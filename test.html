@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    padding: 1rem;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #2d3748;
+}
+
+.thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-button {
+    color: #dc2626;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.tag {
+    background: #f3f4f6;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 12px;
+    color: #4b5563;
+}
+
+.description {
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    /* Limit to 3 lines of text */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-footer {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-type {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.demo-button {
+    background: #9333ea;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 12px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.demo-button:hover {
+    background: #7e22ce;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+<div class="cards-container">
+    <!-- Card 1 -->
+    <div class="card">
+        <div class="thumbnail">
+            <div class="play-button">▶</div>
+        </div>
+        <div class="card-header">
+            <h2 class="title">MyMedia</h2>
+        </div>
+        <div class="card-content">
+            <div class="tags">
+                <span class="tag">Spotify</span>
+                <span class="tag">TMDB</span>
+            </div>
+            <p class="description">
+                A comprehensive media management webapp that lets you showcase your favorite content in one convenient place.
+            </p>
+        </div>
+        <div class="card-footer">
+            <span class="project-type">Final Project</span>
+            <a href="#" class="demo-button">View Demo</a>
+        </div>
+    </div>
+
+    <!-- Card 2 (Example of multiple cards) -->
+    <div class="card">
+        <!-- Same structure as Card 1 -->
+        <!-- Copy and modify content as needed -->
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+        <!-- Same structure as Card 1 -->
+        <!-- Copy and modify content as needed -->
+    </div>
+</div>
+</body>
+</html>
