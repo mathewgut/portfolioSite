@@ -4,6 +4,11 @@
 :root {
     background-color: #ebebeb;
     font-family: "JetBrains Mono",Arial, Helvetica, sans-serif;
+    --accent-color: #FB8A20;
+}
+
+button {
+    font-family: "Inter","JetBrains Mono",Arial, Helvetica, sans-serif;
 }
 
 /* LANDING SECTION */
@@ -49,12 +54,19 @@ h2 {
 h2 span {
     font-weight: 800;
     text-decoration: underline;
+    cursor: default;
+    transition: transform 0.2s ease-in-out;
+    display: inline-block;
+}
+
+h2 span:hover {
+    transform: scale(1.1) rotate(10deg);
 }
 
 #landing-image {
     height: 20rem;
     max-height: 400px;
-    border: 0.25rem solid #FB8A20;
+    border: 0.25rem solid var(--accent-color);
     border-radius: 10rem;
 }
 
@@ -63,7 +75,7 @@ h2 span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;  /* Add this */
+    position: relative;  
 }
 
 .social-media-links {
@@ -75,7 +87,7 @@ h2 span {
 
 .social-media-links > a > img {
     width: 1.6rem;
-    transition: transform 0.2s;
+    transition: ease-in-out 0.25s;
     border: 0.1rem solid black;
     border-radius: 0.5rem;
     padding: 0.2rem;
@@ -83,8 +95,14 @@ h2 span {
     
 }
 
+.social-media-links > a > img:hover {
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #e2771300;
+}
+
 .button-container button {
-    background-color: #FB8A20;
+    background-color: var(--accent-color);
     border: none;
     padding: 0.75rem;
     border-radius: 5rem;
@@ -105,7 +123,7 @@ h2 span {
 .section-breaker {
     display: flex;
     overflow: hidden;
-    color: #FB8A20;
+    color: var(--accent-color);
     justify-content: center;
 }
 
@@ -113,29 +131,30 @@ h2 span {
 
 .education-container {
     display: flex;
-    height: 80vh;
+    height: 100vh;
     justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
 
 }
 
 .education-header-text {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0.5rem;
 }
 
-.education-header-text p {
-    margin-top: 0;
+#graduation-date p {
+    margin: 0;
     padding: 0;
 }
 
 /* used as accent dot in education header text */
 .dot {
-    height: 0.75rem;
-    width: 0.75rem;
-    background-color: #FB8A20;
-    border-radius: 50%;
+    color: var(--accent-color);
+    font-weight: 900;
+    font-size: 1rem;
+    
 }
 
 
@@ -162,29 +181,128 @@ h2 span {
     margin-left: 5rem;
 }
 
-.degree-text h3 {
+h3 {
     font-size: 1.5rem;
     margin: 0;
 }
 
-.degree-text p {
+p {
     margin-top: 1rem;
 }
 
-.school-logo-container > a > img {
+.logo-container > a > img {
     width: 2rem;
     transition: 0.2;
     transition: all 0.15s ease-in-out;
 }
 
-.school-logo-container > a > img:hover {
-    width: 2rem;
+.logo-container > a > img:hover {
     scale: 1.2;
 }
 
 #carleton-campus-image {
     height: 15rem;
     max-height: 400px;
-    border: 0.25rem solid #FB8A20;
+    border: 0.25rem solid var(--accent-color);
     border-radius: 10rem;
+}
+
+.other-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.other-container .logo-container img {
+    width: 3rem;
+}
+
+.other-text {
+    max-width: 30rem;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+    min-height: 100vh;
+}
+
+.project-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 80%;
+    gap: 2rem;
+}
+
+.project-items .item {
+    display: flex;
+    border-radius: 4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-items .item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.project-items .item iframe {
+    flex: auto;
+    aspect-ratio: 16/9;
+    width: 35vw;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+}
+
+.project-items .item img {
+    flex: auto;
+    width: 35vw;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    cursor: pointer;
+}
+
+.project-items .item .item-text {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.project-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    gap: 0.5rem;
+}
+
+.project-tags button {
+    margin: 0 0.2rem;
+    background-color: black;
+    border: 0;
+    border-radius: 2rem;
+    color: white;
+    font-weight: 600;
+    padding: 0.4rem;
+}
+
+.project-items .item .button-container {
+    display: flex;
+    justify-content: end;
+    margin: 0.5rem;
 }
