@@ -301,8 +301,31 @@ h4 {
     padding: 0.4rem;
 }
 
-.project-items .item .button-container {
+.item-footer {
     display: flex;
-    justify-content: end;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item-footer .button-container {
+    display: flex;
     margin: 0.5rem;
+    justify-content: end;
+}
+
+.item-footer .language-container  {
+    display: flex;
+}
+
+.item-footer .language-container > img {
+    width: 2rem;
+    border-radius: 0;
+    margin: 0 0.2rem;
+    cursor: default;
+}
+
+.image-popup {
+    display: flex;
+    position: absolute;
 }

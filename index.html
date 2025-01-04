@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Mathew Gutoskie</title>
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Geist+Mono:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mynerve&display=swap" rel="stylesheet">
 
+    <!-- scripts -->
+     <script src="imageInteractions.js" defer></script>
 </head>
 <body>
     <section class="landing-container">
@@ -17,7 +20,7 @@
             <h2>Hey, I'm <span>Mat</span></h2>
             <p>I’m an aspiring multi-disciplined developer in fields such as full stack web development, game development, and AI engineering</p>
             <div class="button-container"><a href="#education"><button>Education</button></a>
-                <a href="#education"><button>Projects</button></a> <a href="mailto:mathewgutoskie@gmail.com"><button>Contact</button></a></div>
+                <a href="#projects"><button>Projects</button></a> <a href="mailto:mathewgutoskie@gmail.com"><button>Contact</button></a></div>
         </div>
         
             
@@ -63,35 +66,56 @@
         </div>
     </section>
     <span class="section-breaker">//////////</span>
-    <section class="projects-container">
+    <section class="projects-container" id="projects">
         <h3>Projects</h3>
         <p>I am continuously working to improve and further my projects.</p>
         <div class="project-items">
             <div class="item">
                 <iframe src="https://www.youtube.com/embed/TEUhJqpIGPY?si=GhrtZg1drqCBlq4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="noopener noreferrer" allowfullscreen></iframe>
                 <div class="item-text">
-                    <div class="project-tags"><button>Django</button><button>Spotify API</button><button>TMDB API</button><button>Account creation</button></div>
+                    <div class="project-tags"><button>Django</button><button>Spotify API</button><button>TMDB API</button><button>Fullstack</button></div>
                     <h4>MyMedia - (Fall 2024)</h4>
                     <p>A multimedia webapp allowing users to query and showcase their favourite music (songs, artists, albums), shows, and movies. </p>
-                    <div class="button-container"><a href="https://admissions.carleton.ca/programs/interactive-multimedia-and-design-imd/" rel="noopener noreferrer" target="_blank"><button>About program</button></a></div>
+                    <div class="item-footer">
+                        <div class="language-container"><img src="images/language-logos/django-logo.png"><img src="images/language-logos/python-logo.png"><img src="images/language-logos/css-logo.png"></div>
+                        <div class="button-container"><a href="https://github.com/mathewgut/mymedia" rel="noopener noreferrer" target="_blank"><button>Repository</button></a></div>
+                    </div>
                 </div>
             </div>
             <div class="item">
-                <img src="./images/project-images/hue-image.png" alt="chat bot demo image">
+                <iframe src="https://www.youtube.com/embed/Nt0Cs4I1vr0?si=gXBB3sdIhh96wcMu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="noopener noreferrer" allowfullscreen></iframe>
+                <div class="item-text">
+                    <div class="project-tags"><button>Openframeworks</button><button>Computer vision</button></div>
+                    <h4>Feed The Bird - (Fall 2024)</h4>
+                    <p>An interactive demo game utilizing computer vision and colour subtraction to interact with on screen objects using a custom collison system to 'feed the bird'.</p>
+                    <div class="item-footer">
+                        <div class="language-container"><img src="images/language-logos/cpp-logo.png"></div>
+                        <div class="button-container"><a href="https://admissions.carleton.ca/programs/interactive-multimedia-and-design-imd/" rel="noopener noreferrer" target="_blank"><button>About program</button></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./images/project-images/hue-project/hue-image.png" alt="chat bot demo image" class="image-preview">
                 <div class="item-text">
                     <div class="project-tags"><button>LLM</button><button>Stable Diffusion</button><button>Twitch API</button></div>
                     <h4>Hue - (Summer 2023)</h4>
-                    <p> A Twitch chatbot utilizing local generative AI, both LLM and image</p>
-                    <div class="button-container"><a href="https://admissions.carleton.ca/programs/interactive-multimedia-and-design-imd/" rel="noopener noreferrer" target="_blank"><button>About program</button></a></div>
+                    <p> A Twitch chatbot utilizing locally running generative AI models, both LLM and image</p>
+                    <div class="item-footer">
+                        <div class="language-container"><img src="images/language-logos/python-logo.png"></div>
+                        <div class="button-container"><a href="https://github.com/mathewgut/twitch-hue-bot" rel="noopener noreferrer" target="_blank"><button>Repository</button></a></div>
+                    </div>
                 </div>
             </div>
             <div class="item">
-                <img src="./images/project-images/hue-image.png" alt="chat bot demo image">
+                <img src="./images/project-images/hue-project/hue-image.png" alt="chat bot demo image" class="image-preview">
                 <div class="item-text">
                     <div class="project-tags"><button>NLP</button><button>Sentiment analysis</button><button>Multi-model fusion</button></div>
                     <h4>Rubberduk (Winter 2022)</h4>
-                    <p>A EULA, TOS, and privacy policy scanner utilizing sentiment analysis to inform users of potentially concerning clauses.</p>
-                    <div class="button-container"><a href="https://admissions.carleton.ca/programs/interactive-multimedia-and-design-imd/" rel="noopener noreferrer" target="_blank"><button>About program</button></a></div>
+                    <p>A EULA, TOS, and privacy policy scanner utilizing sentiment analysis to pull potentially concerning clauses.</p>
+                    <div class="item-footer">
+                        <div class="language-container"><img src="images/language-logos/python-logo.png"></div>
+                        <div class="button-container"><a href="https://admissions.carleton.ca/programs/interactive-multimedia-and-design-imd/" rel="noopener noreferrer" target="_blank"><button>Repository</button></a></div>
+                    </div>
                 </div>
             </div>
         </div>
