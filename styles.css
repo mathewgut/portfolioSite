@@ -182,7 +182,8 @@ h2 span:hover {
 
 .button-container button:hover {
     scale: 1.1;
-    background-color: #e27713;
+    background-color: white;
+    color: var(--accent-color);
 }
 
 .section-breaker {
