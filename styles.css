@@ -2,9 +2,14 @@
 
 /* defaults override */
 :root {
-    background-color: #ebebeb;
+    
     font-family: "JetBrains Mono",Arial, Helvetica, sans-serif;
     --accent-color: #FB8A20;
+}
+
+body {
+    background-color: #ebebeb;
+    margin: 0;
 }
 
 button {
@@ -20,6 +25,7 @@ button {
     align-items: center;
     margin: 0 4rem;
     height: 100vh;
+    min-height: 3rem;
 }
 
 .arrow-container {
@@ -30,7 +36,8 @@ button {
     right: 14rem;  
     transform: rotate(15deg);  
     color: #ff4a4a;
-    font-family: "Mynerve"
+    font-family: "Mynerve";
+    cursor: default;
 }
 
 .arrow-container p{
@@ -101,7 +108,37 @@ h2 span:hover {
     background-color: #e2771300;
 }
 
-@media (max-width: 640px) {
+.button-container button:hover {
+    scale: 1.1;
+    background-color: white;
+    color: var(--accent-color);
+    border: 0.1rem solid var(--accent-color);
+}
+
+.section-breaker {
+    display: flex;
+    overflow: hidden;
+    color: var(--accent-color);
+    justify-content: center;
+}
+
+.button-container button {
+    background-color: var(--accent-color);
+    border: 0.1 solid rgba(255, 255, 255, 0);
+    border-style: solid;
+    padding: 0.75rem;
+    border-radius: 5rem;
+    color: white;
+    font-weight: 600;
+    -webkit-box-shadow: 0px 4px 8px -4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 4px 8px -4px rgba(0,0,0,0.2);
+    box-shadow: 0px 4px 8px -4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* MOBILE FORMATTING */
+@media (max-width: 720px) {
     .landing-container {
         flex-direction: column-reverse;
         justify-content:center;
@@ -166,38 +203,12 @@ h2 span:hover {
     }
 }
 
-.button-container button {
-    background-color: var(--accent-color);
-    border: none;
-    padding: 0.75rem;
-    border-radius: 5rem;
-    color: white;
-    font-weight: 600;
-    -webkit-box-shadow: 0px 4px 8px -4px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 4px 8px -4px rgba(0,0,0,0.2);
-    box-shadow: 0px 4px 8px -4px rgba(0,0,0,0.2);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.button-container button:hover {
-    scale: 1.1;
-    background-color: white;
-    color: var(--accent-color);
-}
-
-.section-breaker {
-    display: flex;
-    overflow: hidden;
-    color: var(--accent-color);
-    justify-content: center;
-}
-
 /* EDUCATION SECTION */
 
 .education-container {
     display: flex;
     height: 100vh;
+    min-height:10rem;
     justify-content: center;
     flex-direction: column;
     gap: 4rem;
@@ -288,6 +299,34 @@ p {
     text-align: center;
 }
 
+/* MOBILE MEDIA QUERIES */
+@media (max-width: 720px) {
+    .degree-container {
+        flex-direction: column-reverse;
+    }
+
+    .degree-text {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 1rem;
+        max-width: 90vw;
+    }
+
+    .other-text {
+        max-width: 90vw;
+    }
+
+    #carleton-campus-image {
+        height: 20vh;
+        max-width: 80vw;
+    }
+}
+
+
+/* PROJECTS SECTION */
+
 h4 {
     font-size: 1.2rem;
     margin-bottom: 0;
@@ -307,7 +346,7 @@ h4 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 80%;
+    max-width: 80vw;
     gap: 2rem;
 }
 
@@ -391,8 +430,44 @@ h4 {
     cursor: default;
 }
 
+@media (max-width: 720px) {
+    .project-items {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .project-items .item iframe {
+        width: 70vw;
+    }
+
+    .project-items .item .image-preview {
+        width: 70vw;
+    }
+
+    .project-items .item .item-text{ 
+        display: flex;
+        width: 80%;
+        text-align: center;
+    }
+
+}
+
+
 .image-popup {
     display: flex;
     position: absolute;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dcdcdc;
+    margin-top: 2rem;
+    padding: 0;
+    width: 100vw;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+}
