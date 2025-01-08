@@ -2,13 +2,18 @@
 
 /* defaults override */
 :root {
-    
     font-family: "JetBrains Mono",Arial, Helvetica, sans-serif;
     --accent-color: #FB8A20;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #ebebeb;
+    
     margin: 0;
 }
 
@@ -359,6 +364,7 @@ h4 {
     padding: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #ebebeb;
 }
 
 .project-items .item:hover {
@@ -435,7 +441,6 @@ h4 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
     }
 
     .project-items .item iframe {
@@ -451,9 +456,7 @@ h4 {
         width: 80%;
         text-align: center;
     }
-
 }
-
 
 .image-popup {
     display: flex;
