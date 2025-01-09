@@ -404,7 +404,7 @@ h4 {
 .project-tags button {
     margin: 0 0.2rem;
     background-color: rgba(255, 255, 255, 0);
-    border: 0.1rem solid rgb(0, 0, 0);
+    border: 0.12rem solid black;
     border-radius: 2rem;
     color: black;
     font-weight: 600;
@@ -473,11 +473,41 @@ h4 {
     max-width: 80vw;
 }
 
+#image-view .overlay-container {
+    position: relative;
+    text-align: end;
+}
+
+#image-view .overlay-container button {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    backdrop-filter: blur(1rem);
+    background-color: white;
+}
+
+#image-view .overlay-container button:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+#image-view .overlay-container button:focus {
+    transform: rotate(90deg);
+}
+
+
 @media (max-width: 720px) {
     #image-view img {
         max-width: 90vw;
     }
 }
+
+
 
 footer {
     display: flex;
