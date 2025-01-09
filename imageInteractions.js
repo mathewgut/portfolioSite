@@ -1,8 +1,4 @@
-const selectedImage = document.getElementsByClassName("image-preview")
-
 const projectContainer = document.querySelector("#projects")
-projectItems = projectContainer.querySelectorAll(".item")
-projectContainer ? console.log("yes") : console.log("no");
 const imageViewContainer = document.querySelector('#image-view');
 
 // container listener for performance
@@ -15,14 +11,10 @@ projectContainer.addEventListener("click",(event)=>{
         imageViewContainerImg.src = imageItemPreviewSrc;
         imageViewContainer.style.display = 'flex';
     }
-   
-    else {
-    console.log("NO IMAGE :(");
-    }  
 })
 
 imageViewContainer.addEventListener("click",(event)=>{
-    if(!event.target.src){
+    if(!event.target.src) {
         imageViewContainer.style.display = 'none';
     }
 })

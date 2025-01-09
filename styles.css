@@ -403,10 +403,10 @@ h4 {
 
 .project-tags button {
     margin: 0 0.2rem;
-    background-color: black;
-    border: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0.1rem solid rgb(0, 0, 0);
     border-radius: 2rem;
-    color: white;
+    color: black;
     font-weight: 600;
     padding: 0.4rem;
 }
@@ -471,7 +471,12 @@ h4 {
 
 #image-view img {
     max-width: 80vw;
-    aspect-ratio: 16/9;
+}
+
+@media (max-width: 720px) {
+    #image-view img {
+        max-width: 90vw;
+    }
 }
 
 footer {
